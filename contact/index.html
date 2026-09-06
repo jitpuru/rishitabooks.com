@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talk to Us — Rishita Books</title>
+<meta name="description" content="Tell us about your book, your list or your enquiry. Rishita Books, Singapore, publishing experts and professionals worldwide.">
+<link rel="canonical" href="https://www.rishitabooks.com/contact/">
+<meta property="og:site_name" content="Rishita Books">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Talk to Us — Rishita Books">
+<meta property="og:description" content="Tell us about your book, your list or your enquiry. Rishita Books, Singapore, publishing experts and professionals worldwide.">
+<meta property="og:url" content="https://www.rishitabooks.com/contact/">
+<meta property="og:image" content="https://www.rishitabooks.com/images/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<nav id="nav" class="solid">
+  <a class="nav-logo" href="/"><img src="/images/logo.png" alt="Rishita Books"></a>
+  <ul class="nav-links">
+    <li><a data-page="programme" href="/programme/">The Programme</a></li>
+    <li><a data-page="books" href="/books/">Books</a></li>
+    <li><a data-page="rights" href="/foreign-rights/">Foreign Rights</a></li>
+    <li><a data-page="journal" href="/journal/">Journal</a></li>
+    <li><a data-page="about" href="/about/">About</a></li>
+    <li><a class="nav-cta" href="/contact/">Talk to us</a></li>
+  </ul>
+  <div class="burger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mm">
+  <button class="mobile-close" onclick="toggleMenu()">&times;</button>
+  <a href="/">Home</a>
+  <a href="/programme/">The Programme</a>
+  <a href="/books/">Books</a>
+  <a href="/foreign-rights/">Foreign Rights</a>
+  <a href="/journal/">Journal</a>
+  <a href="/about/">About</a>
+  <a href="/contact/">Talk to us</a>
+</div>
+
+<div class="page active" id="page-contact">
+  <section class="hero" style="padding-bottom:2.5rem">
+    <div class="wrap">
+      <p class="label label-accent reveal">Contact</p>
+      <h1 class="h1 reveal" style="margin-top:1.2rem">Talk to <em>us</em></h1>
+      <p class="hero-sub reveal">If you have a manuscript, an outline, or just an idea you keep coming back to, we are glad to have the conversation.</p>
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="cols2">
+        <div class="reveal">
+          <p class="label label-accent" style="margin-bottom:.6rem">Email</p>
+          <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:1.12rem;margin-bottom:2rem"><a href="mailto:jit@jitpuru.com" style="color:var(--ink);text-decoration:none">jit@jitpuru.com</a></p>
+          <p class="label label-accent" style="margin-bottom:.6rem">Publisher</p>
+          <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:1.12rem;margin-bottom:2rem">Jit Puru</p>
+          <p class="label label-accent" style="margin-bottom:.6rem">Based in</p>
+          <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:1.12rem;margin-bottom:2rem">Singapore &middot; Publishing worldwide</p>
+          <p class="label label-accent" style="margin-bottom:.6rem">For rights buyers</p>
+          <p>Ask for the rights catalogue, sample chapters and terms.</p>
+        </div>
+        <div class="reveal">
+          <form onsubmit="return sendMsg(event)">
+            <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" required></div>
+            <div class="field"><label for="f-topic">I am reaching out as</label>
+              <select id="f-topic">
+                <option>An author who wants to publish</option>
+                <option>Requesting the full programme</option>
+                <option>A rights buyer or publisher</option>
+                <option>Media or partnership enquiry</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-msg">About your book</label><textarea id="f-msg" required></textarea></div>
+            <button type="submit" class="btn btn-solid" style="width:100%;cursor:pointer">Send message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <img src="/images/logo.png" alt="Rishita Books">
+        <p>A boutique publishing house. We publish experts and professionals who have something worth saying &mdash; and leave the copyright where it belongs: with the author.</p>
+      </div>
+      <div class="f-cols">
+        <div class="f-col">
+          <h4>Explore</h4>
+          <a href="/programme/">The Programme</a>
+          <a href="/books/">Books</a>
+          <a href="/foreign-rights/">Foreign Rights</a>
+          <a href="/journal/">Journal</a>
+          <a href="/about/">About</a>
+        </div>
+        <div class="f-col">
+          <h4>Connect</h4>
+          <a href="mailto:jit@jitpuru.com">jit@jitpuru.com</a>
+          <a href="/contact/">Talk to us</a>
+          <span>Singapore &middot; Worldwide</span>
+        </div>
+      </div>
+    </div>
+    <div class="f-bot">
+      <span>&copy; <span id="yr"></span> Rishita Books</span>
+      <span>Your book. Done properly.</span>
+      <span>rishitabooks.com</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/site.js"></script>
+</body>
+</html>

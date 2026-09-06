@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 705 245">
+    <g fill="none" stroke="currentColor">
+        <path d="M10 10h640a46 46 0 0 1 46 46v134a46 46 0 0 1-46 46H10V10" stroke-width="5"
+            stroke-linecap="square" />
+        <g stroke-linecap="round">
+            <path
+                d="M70 175v-20m0 10h25m-25-30h25m-13 0v-20m-12 0h25M70 72v18m0 0h25m0 0V72M82 90V76"
+                stroke-width="6" />
+            <path
+                d="M180 175V75m0 0l80 65m0-65v100m90-100v100m80-100v100m0 0h65m75-100v100m0 0h60m-60-50h50m-50-50h60"
+                stroke-width="10" />
+        </g>
+    </g>
+</svg>
