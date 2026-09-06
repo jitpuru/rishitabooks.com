@@ -12,8 +12,3 @@
 # Local scratch
 *.log
 
-# Held back until the DNS cutover — see notes below.
-# GitHub Pages reads CNAME as "serve this site at www.rishitabooks.com",
-# which would redirect the preview to the old Squarespace site.
-# Delete this line when we move DNS.
-CNAME
