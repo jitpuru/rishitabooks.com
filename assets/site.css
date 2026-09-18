@@ -293,15 +293,15 @@ footer{background:var(--band-bg);color:var(--band-ink);padding:4.5rem 0 2.2rem;m
 .shelf-carousel{position:relative;border:1px solid var(--rule);background:var(--card);overflow:hidden}
 .shelf-track{display:flex;width:200%;transition:transform .7s cubic-bezier(.4,0,.2,1)}
 .shelf-slide{width:50%;flex:0 0 50%}
-.shelf-grid{display:grid;grid-template-columns:minmax(0,400px) 1fr;height:100%}
+.shelf-grid{display:grid;grid-template-columns:minmax(0,360px) 1fr;height:100%}
 .shelf-copy{padding:3rem 2.6rem 4.4rem;display:flex;flex-direction:column;justify-content:center}
 .shelf-copy h2{font-family:'Libre Baskerville',Georgia,serif;font-size:2rem;font-weight:400;line-height:1.2;margin:.7rem 0 .9rem;color:var(--ink)}
 .shelf-copy h2 em{font-style:italic;color:var(--accent-warm)}
 .shelf-copy p{color:var(--ink-2);line-height:1.6}
 .shelf-copy .btn{align-self:flex-start;margin-top:1.6rem}
-.shelf-art{background:linear-gradient(135deg,#16304F 0%,#0F3D2E 100%);display:flex;align-items:center;justify-content:center;gap:2.3rem;padding:2.8rem 2.2rem}
+.shelf-art{background:linear-gradient(135deg,#16304F 0%,#0F3D2E 100%);display:flex;align-items:center;justify-content:center;gap:2rem;padding:2.8rem 2.2rem}
 .shelf-art--3{background:linear-gradient(135deg,#1B2A44 0%,#561F1D 100%);gap:3rem}
-.shelf-art img{height:240px;display:block;box-shadow:0 26px 50px -16px rgba(0,0,0,.6)}
+.shelf-art img{height:208px;width:auto;flex:0 0 auto;display:block;box-shadow:0 26px 50px -16px rgba(0,0,0,.6)}
 .shelf-art--4 a:nth-child(1) img{transform:rotate(-7deg)}
 .shelf-art--4 a:nth-child(2) img{transform:rotate(-2.5deg) translateY(-12px)}
 .shelf-art--4 a:nth-child(3) img{transform:rotate(2.5deg) translateY(-12px)}
@@ -318,10 +318,15 @@ footer{background:var(--band-bg);color:var(--band-ink);padding:4.5rem 0 2.2rem;m
  .shelf-copy{padding:2.2rem 1.6rem 3.6rem}
  .shelf-copy h2{font-size:1.6rem}
  .shelf-art,.shelf-art--3{flex-wrap:wrap;gap:1.3rem;padding:2rem 1.2rem}
- .shelf-art img{height:158px;transform:none!important}
+ .shelf-art img{height:158px;width:auto;transform:none!important}
  .shelf-dots{left:1.6rem;bottom:auto;top:1.2rem}
 }
 @media(prefers-reduced-motion:reduce){.shelf-track{transition:none}}
 
 .books.compact.four{grid-template-columns:repeat(4,minmax(0,250px))}
 @media(max-width:860px){.books.compact.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.stages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:4rem}
+.stage{grid-template-columns:78px 1fr;gap:1.3rem;padding:2.1rem 0;align-items:start}
+.stage-n{font-family:'Libre Baskerville',Georgia,serif;font-size:2.7rem;font-weight:400;letter-spacing:0;line-height:.9;padding-top:.1rem}
+@media(max-width:860px){.stages{grid-template-columns:1fr;column-gap:0}.stage{grid-template-columns:58px 1fr;gap:1rem;padding:1.6rem 0}.stage-n{font-size:2rem}}
