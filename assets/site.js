@@ -18,3 +18,24 @@ function sendMsg(e){e.preventDefault();
  } else {[].forEach.call(els,function(el){el.classList.add('visible')})}
  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
 })();
+
+(function(){
+ var c=document.querySelector('[data-shelf]'); if(!c) return;
+ var track=c.querySelector('.shelf-track'),
+     dots=Array.prototype.slice.call(c.querySelectorAll('.shelf-dot')),
+     i=0, timer=null,
+     reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function go(n){
+  i=(n+dots.length)%dots.length;
+  track.style.transform='translateX(-'+(i*50)+'%)';
+  dots.forEach(function(d,k){d.classList.toggle('is-on',k===i)});
+ }
+ function stop(){ if(timer){clearInterval(timer); timer=null;} }
+ function start(){ if(reduce) return; stop(); timer=setInterval(function(){go(i+1)},7000); }
+ dots.forEach(function(d,k){d.addEventListener('click',function(){go(k); start();})});
+ c.addEventListener('mouseenter',stop);
+ c.addEventListener('mouseleave',start);
+ c.addEventListener('focusin',stop);
+ c.addEventListener('focusout',start);
+ start();
+})();
