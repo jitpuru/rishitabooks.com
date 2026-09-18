@@ -1,7 +1,7 @@
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
---paper:#FCFAF6;--paper-2:#EAF0F8;--card:#FFFFFF;--deep:#1B2A44;
+--paper:#FCFAF6;--paper-2:#F4F0E8;--card:#FFFFFF;--deep:#1B2A44;
 --ink:#1A2438;--ink-2:#4A5468;--muted:#646C7C;
 --accent:#22406B;--accent-2:#16304F;--accent-warm:#6E2B2B;--rule:#E4E0D6;--hero-bg:url("/images/hero-bg-map.jpg");
 --nav-bg:rgba(252,250,246,.94);--logo-filter:none;--sel:rgba(34,64,107,.14);
