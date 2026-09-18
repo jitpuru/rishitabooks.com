@@ -20,22 +20,26 @@ function sendMsg(e){e.preventDefault();
 })();
 
 (function(){
- var c=document.querySelector('[data-shelf]'); if(!c) return;
- var track=c.querySelector('.shelf-track'),
-     dots=Array.prototype.slice.call(c.querySelectorAll('.shelf-dot')),
-     i=0, timer=null,
-     reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- function go(n){
-  i=(n+dots.length)%dots.length;
-  track.style.transform='translateX(-'+(i*50)+'%)';
-  dots.forEach(function(d,k){d.classList.toggle('is-on',k===i)});
+ var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function carousel(root,prefix,interval){
+  var track=root.querySelector('.'+prefix+'-track'),
+      dots=Array.prototype.slice.call(root.querySelectorAll('.'+prefix+'-dot')),
+      n=dots.length, step=100/n, i=0, timer=null;
+  if(!track||n<2) return;
+  function go(k){
+   i=(k+n)%n;
+   track.style.transform='translateX(-'+(i*step)+'%)';
+   dots.forEach(function(d,j){d.classList.toggle('is-on',j===i)});
+  }
+  function stop(){ if(timer){clearInterval(timer); timer=null;} }
+  function start(){ if(reduce) return; stop(); timer=setInterval(function(){go(i+1)},interval); }
+  dots.forEach(function(d,k){d.addEventListener('click',function(){go(k); start();})});
+  root.addEventListener('mouseenter',stop);
+  root.addEventListener('mouseleave',start);
+  root.addEventListener('focusin',stop);
+  root.addEventListener('focusout',start);
+  start();
  }
- function stop(){ if(timer){clearInterval(timer); timer=null;} }
- function start(){ if(reduce) return; stop(); timer=setInterval(function(){go(i+1)},5000); }
- dots.forEach(function(d,k){d.addEventListener('click',function(){go(k); start();})});
- c.addEventListener('mouseenter',stop);
- c.addEventListener('mouseleave',start);
- c.addEventListener('focusin',stop);
- c.addEventListener('focusout',start);
- start();
+ var s=document.querySelector('[data-shelf]'); if(s) carousel(s,'shelf',5000);
+ var f=document.querySelector('[data-feat]'); if(f) carousel(f,'feat',6500);
 })();

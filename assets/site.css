@@ -330,3 +330,11 @@ footer{background:var(--band-bg);color:var(--band-ink);padding:4.5rem 0 2.2rem;m
 .stage{grid-template-columns:78px 1fr;gap:1.3rem;padding:2.1rem 0;align-items:start}
 .stage-n{font-family:'Libre Baskerville',Georgia,serif;font-size:2.7rem;font-weight:400;letter-spacing:0;line-height:.9;padding-top:.1rem}
 @media(max-width:860px){.stages{grid-template-columns:1fr;column-gap:0}.stage{grid-template-columns:58px 1fr;gap:1rem;padding:1.6rem 0}.stage-n{font-size:2rem}}
+
+.feat-carousel{position:relative;overflow:hidden}
+.feat-track{display:flex;width:400%;transition:transform .7s cubic-bezier(.4,0,.2,1)}
+.feat-slide{width:25%;flex:0 0 25%}
+.feat-dots{display:flex;gap:.55rem;margin-top:1.8rem}
+.feat-dot{width:9px;height:9px;padding:0;border-radius:50%;border:1px solid var(--accent);background:transparent;cursor:pointer;transition:background .3s}
+.feat-dot.is-on{background:var(--accent)}
+@media(prefers-reduced-motion:reduce){.feat-track{transition:none}}
