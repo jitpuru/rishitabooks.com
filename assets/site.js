@@ -31,7 +31,7 @@ function sendMsg(e){e.preventDefault();
   dots.forEach(function(d,k){d.classList.toggle('is-on',k===i)});
  }
  function stop(){ if(timer){clearInterval(timer); timer=null;} }
- function start(){ if(reduce) return; stop(); timer=setInterval(function(){go(i+1)},7000); }
+ function start(){ if(reduce) return; stop(); timer=setInterval(function(){go(i+1)},5000); }
  dots.forEach(function(d,k){d.addEventListener('click',function(){go(k); start();})});
  c.addEventListener('mouseenter',stop);
  c.addEventListener('mouseleave',start);
