@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Author dashboard | Rishita Books</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Rishita Books">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icon-512.png">
+<style>
+:root{color-scheme:light dark}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F5F6F4;color:#16181D;
+ font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;padding:env(safe-area-inset-top,0) 1.25rem env(safe-area-inset-bottom,0)}
+main{max-width:26rem;text-align:center}
+img{width:120px;height:auto;border-radius:22%}
+h1{font:600 1.5rem/1.25 Georgia,"Times New Roman",serif;margin:1.25rem 0 .5rem}
+p{color:#5C6370;margin:.5rem 0}
+a.btn{display:inline-block;margin-top:1.25rem;padding:.8rem 1.4rem;border-radius:999px;background:#16181D;color:#fff;text-decoration:none;font-weight:600}
+a.btn:focus-visible{outline:3px solid #2B6CB0;outline-offset:3px}
+.tip{margin-top:1.5rem;font-size:.9rem}
+@media (prefers-color-scheme:dark){body{background:#15181C;color:#E8EAED}p{color:#9BA2AC}a.btn{background:#E8EAED;color:#15181C}}
+</style>
+</head>
+<body>
+<main>
+ <img src="icon-512.png" alt="Rishita Books">
+ <h1 id="h">Your author dashboard</h1>
+ <p id="msg">Sales and royalties for your books with Rishita Books.</p>
+ <a class="btn" id="go" href="#">Open my dashboard</a>
+ <p class="tip" id="tip">On iPhone, tap Share, then Add to Home Screen, to keep this one tap away.</p>
+</main>
+<script>
+const APP='https://script.google.com/macros/s/AKfycbwJU88S8Jl7MzH169GpHPm6tb3mbZQxD_BL5syTDCwT-6DHr9wxk7SEqghntKSIQV0Uhw/exec';
+const key=decodeURIComponent(location.hash.slice(1)).trim();
+const go=document.getElementById('go');
+if(!/^[A-Za-z0-9_-]{16,}$/.test(key)){
+  document.getElementById('h').textContent='This link is incomplete';
+  document.getElementById('msg').textContent='Please use the full link Jit sent you, or contact Jit Puru at Rishita Books.';
+  go.remove();document.getElementById('tip').remove();
+}else{
+  const url=APP+'?k='+encodeURIComponent(key);
+  go.href=url;
+  if(window.navigator.standalone===true||matchMedia('(display-mode: standalone)').matches){location.replace(url)}
+  else if(!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){document.getElementById('tip').textContent='Bookmark this page to come back to it.'}
+}
+</script>
+</body>
+</html>
