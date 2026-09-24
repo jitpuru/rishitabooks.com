@@ -13,7 +13,7 @@ function sendMsg(e){e.preventDefault();
  if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){
    if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},
-   {threshold:.08,rootMargin:'0px 0px -40px 0px'});
+   {threshold:0,rootMargin:'0px 0px -40px 0px'});
   [].forEach.call(els,function(el){io.observe(el)});
  } else {[].forEach.call(els,function(el){el.classList.add('visible')})}
  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
