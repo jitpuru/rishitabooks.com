@@ -260,6 +260,10 @@ footer{background:var(--band-bg);color:var(--band-ink);padding:4.5rem 0 2.2rem;m
 .testimonial .t-body p{font-size:1.06rem;line-height:1.8;margin-bottom:1.15rem;color:var(--ink-2)}
 .testimonial .t-body p:first-child{font-family:'Libre Baskerville',Georgia,serif;font-style:italic;font-size:1.2rem;line-height:1.6;color:var(--ink)}
 .t-side .q-attr{margin-top:0}
+.praise{max-width:50rem}
+.praise .hero-quote{font-size:1.2rem;line-height:1.66;margin-top:0}
+.praise .q-attr{margin-top:1.5rem}
+.praise .hero-quote em{font-style:normal}
 .stockists{display:flex;align-items:center;gap:1.6rem;padding:1rem 3.5rem;border-top:1px solid var(--rule)}
 .stockists .label{flex:0 0 auto;margin:0}
 .ticker{flex:1 1 auto;overflow:hidden;min-width:0;
