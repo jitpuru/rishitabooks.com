@@ -264,9 +264,8 @@ footer{background:var(--band-bg);color:var(--band-ink);padding:4.5rem 0 2.2rem;m
 .praise-item{display:grid;grid-template-columns:232px 1fr;gap:3rem;align-items:start;border-top:1px solid var(--rule);padding-top:2.6rem}
 .praise-item:first-child{border-top:none;padding-top:0}
 .praise-item .q-attr{margin-top:0}
-.praise-quote p{font-family:'Libre Baskerville',Georgia,serif;font-style:italic;font-size:1.06rem;line-height:1.68;color:var(--ink);margin:0 0 .85rem}
+.praise-quote p{font-family:'Libre Baskerville',Georgia,serif;font-size:1.06rem;line-height:1.68;color:var(--ink);margin:0 0 .85rem}
 .praise-quote p:last-child{margin-bottom:0}
-.praise-quote em{font-style:normal}
 @media(max-width:860px){.praise-item{grid-template-columns:1fr;gap:1.1rem}.praise-item .praise-quote{order:1}.praise-item .q-attr{order:2}}
 .stockists{display:flex;align-items:center;gap:1.6rem;padding:1rem 3.5rem;border-top:1px solid var(--rule)}
 .stockists .label{flex:0 0 auto;margin:0}
