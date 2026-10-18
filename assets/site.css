@@ -256,6 +256,8 @@ footer{background:var(--band-bg);color:var(--band-ink);padding:4.5rem 0 2.2rem;m
 .q-attr{margin-top:1.2rem}
 .q-attr strong{display:block;font-family:'Libre Baskerville',Georgia,serif;font-style:normal;font-weight:400;font-size:1.02rem;color:var(--ink)}
 .q-attr span{display:block;font-size:.88rem;color:var(--muted);line-height:1.5;margin-top:.2rem}
+.q-attr strong a{color:inherit;text-decoration:none;border-bottom:1px solid var(--tlink-b);transition:color .25s,border-color .25s}
+.q-attr strong a:hover{color:var(--accent-warm);border-bottom-color:var(--accent-warm)}
 .testimonial{display:grid;grid-template-columns:230px 1fr;gap:3rem;align-items:start}
 .testimonial .t-body p{font-size:1.06rem;line-height:1.8;margin-bottom:1.15rem;color:var(--ink-2)}
 .testimonial .t-body p:first-child{font-family:'Libre Baskerville',Georgia,serif;font-style:italic;font-size:1.2rem;line-height:1.6;color:var(--ink)}
